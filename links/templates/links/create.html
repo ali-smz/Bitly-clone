@@ -1,0 +1,13 @@
+{% extends "links/_base.html" %} {% load tailwind_filters %} {% block content %}
+<div class="sm:w-3/4 mx-auto">
+  <form action="" method="POST">
+    {% comment %}a long random string that insure thats you for submit its used
+    for security things {% endcomment %} {% csrf_token %} {{form|crispy}}
+    <input
+      type="submit"
+      value="create"
+      class="rounded px-5 py-2 bg-green-300 hover:cursor-pointer"
+    />
+  </form>
+</div>
+{% endblock content %}
